@@ -31,7 +31,7 @@ const MobileNav = ({ user }: MobileNavProps) => {
           />
         </SheetTrigger>
         <SheetContent side="left" className="border-none bg-white">
-          <Link href={"/"} className="mb-12 cursor-pointer items-center gap-2">
+          <Link href={"/"} className="cursor-pointer flex items-center gap-1 px-4">
             <Image
               src="/icons/logo.svg"
               width={34}
@@ -61,17 +61,16 @@ const MobileNav = ({ user }: MobileNavProps) => {
                           "bg-bank-gradient": isActive,
                         })}
                       >
-                      
-                          <Image
-                            src={item.imgURL}
-                            alt={item.label}
-                            width={20}
-                            height={20}
-                            className={cn({
-                              "brightness-[3] invert-0": isActive,
-                            })}
-                          />
-                       
+                        <Image
+                          src={item.imgURL}
+                          alt={item.label}
+                          width={20}
+                          height={20}
+                          className={cn({
+                            "brightness-[3] invert-0": isActive,
+                          })}
+                        />
+
                         <p
                           className={cn("text-16 font-semibold text-black-2", {
                             "text-white": isActive,
@@ -83,7 +82,6 @@ const MobileNav = ({ user }: MobileNavProps) => {
                     </SheetClose>
                   );
                 })}
-
                 User
               </nav>
             </SheetClose>
